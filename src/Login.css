@@ -1,13 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    background-color: #27262C;
-}
-
 .container-login{
     width: 100%;
     height: 100%;
@@ -15,6 +5,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  
 }
 
 form{
@@ -27,10 +18,11 @@ form{
     gap: 80px;
     position: absolute;
     top: 15%;
+    
 }
 
 .titulo{
-    color: white;
+    color: #2d2d2d;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
     font-size: 50px;
 }
@@ -43,12 +35,12 @@ form{
 
 input{
     background-color: transparent;
-    border: white 1px solid;
+    border: #2d2d2d 1px solid;
     border-top: none;
     border-left: none;
     border-right: none;
     outline: none;
-    color: white;
+    color: #000000;
     padding: 10px 10px 10px 0px;
     width: 400px;
   
@@ -64,11 +56,12 @@ input{
 }
 
 .texto-informacao{
-    color: white;
+    color: #2d2d2d;
+    font-family:sans-serif;
 }
 
 .chama-cadastro{
-    color: white;
+    color: #2d2d2d;
 
 }
 

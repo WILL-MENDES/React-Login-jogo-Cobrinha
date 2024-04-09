@@ -21,7 +21,7 @@ function Login() {
     if(usuarioLogin == usuario){
       
       if(senhaLogin == senha){
-          navigate("/cadastro")
+          navigate("/menu")
       } else {alert("senha invalida")}
 
     } else {
@@ -51,7 +51,7 @@ function Login() {
               <input type="text" value={usuarioLogin} onChange={(e)=>setUsuarioLogin(e.target.value)} name="name" id="nome" placeholder='Usuário'/>
               <input type="password" value={senhaLogin} onChange={(e)=>setSenhaLogin(e.target.value)} name="password" id="senha" placeholder='Senha'/>
               <button className='botao-entrar' onClick={()=>comparar()}>Entrar</button>
-              <p className='texto-informacao'>Caso ainda não tenha conta faça seu cadastro <Link className='chama-cadastro' to={"/cadastro"}>AQUI</Link></p>
+              <p className='texto-informacao'>Caso ainda não tenha conta faça seu cadastro <Link className='chama-cadastro' to={"/"}>AQUI</Link></p>
 
             </div>
 

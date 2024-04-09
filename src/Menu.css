@@ -1,0 +1,45 @@
+
+
+.menu{
+   background-color: #2d2d2d;
+   margin-left: 25px;
+   width: 300px;
+   height: 616px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.usuario{
+    margin-top: 25px;
+    color: white;
+    display: flex;
+    font-size: 20px;
+
+}
+
+.linha{
+    margin-top: 35px;
+    width: 50%;
+}
+
+.container-botoes-menu{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    height: 100%;
+}
+
+.container-botoes-menu button{
+    font-size: 18px;
+}
+
+.sair{
+  position: relative;
+  bottom:0;
+}
+
+
+

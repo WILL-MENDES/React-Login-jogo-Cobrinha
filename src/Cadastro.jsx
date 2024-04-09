@@ -1,19 +1,28 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './Cadastro.css'
 import { useState } from 'react'
 
 
+
 function Cadastro(){
+
+    const navigate = useNavigate();
 
     const [usuario, setUsuario] = useState()
     const [senha, setSenha] = useState()
+    const [jogador, setJogador] = useState()
 
-    const armazenar = (chave1,chave2,valor1,valor2)=>{
-        localStorage.setItem(chave1, valor1)
-        localStorage.setItem(chave2, valor2)
+
+    const armazenar = (usuario, senha, jogador)=>{
+      var objeto = {
+        usuario:usuario,
+        senha: senha,
+        jogador: jogador
+      }
+      localStorage.setItem("pessoa",JSON.stringify(objeto)) 
+      navigate("/menu")
     }
 
-  
     return(
         <>
             <div className='container-cadastro'>
@@ -22,15 +31,15 @@ function Cadastro(){
 
                 <form action="">
 
-                <h1 className='titulo'>{usuario}</h1>
+                <h1 className='titulo'>Cadastro</h1>
                 <div className='container-inputs'>
 
                 <input type="text" value={usuario} onChange={(e)=>setUsuario(e.target.value)} name="usuario" id="usuario" placeholder='Usuário' required/>
                 <input type="password" value={senha} onChange={(e)=>setSenha(e.target.value)} name="password" id="senha" placeholder='Senha' required/>
                 <input type="email" name="email" id="email" placeholder='E-mail' required/>
-                <input type="text" name="nome" id='nome' placeholder='Nome do Jogador' required/>
-                <button className='botao-entrar' onClick={()=>armazenar("usuario","senha",usuario,senha)}>Cadastrar</button>
-                <p className='texto-informacao'>Já tem cadastro? Faça Login <Link className='chama-cadastro' to={"/"}>AQUI</Link></p>
+                <input type="text" value={jogador} onChange={(e)=>setJogador(e.target.value)} name="nome" id='nome' placeholder='Nome do Jogador' required/>
+                <button className='botao-entrar' onClick={()=>armazenar(usuario,senha,jogador)}>Cadastrar</button>
+                <p className='texto-informacao'>Já tem cadastro? Faça Login <Link className='chama-cadastro' to={"/login"}>AQUI</Link></p>
 
                 </div>
 
