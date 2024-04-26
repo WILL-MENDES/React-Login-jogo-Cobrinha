@@ -7,3 +7,33 @@
     justify-content: center;
     background-color: #ededed;
 }
+
+.form-cadastro{
+    width: auto;
+    height: auto;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    gap: 80px;
+    position: absolute;
+    top: 8%;
+    background-color: #383839;
+    border-radius: 20px;
+    
+    
+}
+
+.input-cadastro{
+    background-color: transparent;
+    border: white 1px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    color: white;
+    padding: 10px 10px 10px 0px;
+    width: 400px;
+  
+}
