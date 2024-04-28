@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom'
-import './Cadastro.css'
+import '../style/pages/Cadastro.css'
 import { useState } from 'react'
 
 
@@ -21,7 +21,7 @@ function Cadastro(){
         email: email
       }
       localStorage.setItem("pessoa",JSON.stringify(objeto)) 
-      navigate("/menu")
+      navigate("/perfil")
     }
 
     return(

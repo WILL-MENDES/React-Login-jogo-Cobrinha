@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom'
-import './Login.css'
+import '../style/pages/Login.css'
 import { useState } from 'react'
 
 
@@ -20,7 +20,7 @@ function Login() {
     if(usuarioLogin == usuario.usuario){
       
       if(senhaLogin == usuario.senha){
-          navigate("/menu")
+          navigate("/perfil")
       } else {alert("senha invalida")}
 
     } else {

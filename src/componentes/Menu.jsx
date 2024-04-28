@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './Menu.css'
+import '../style/componentes/Menu.css'
 import { ImUser,  ImExit } from "React-icons/im";
 import { MdDashboard } from "react-icons/md";
 import { BiSolidCategoryAlt } from "react-icons/bi";
@@ -29,11 +29,11 @@ function Menu(){
         <p id='usuario' className='usuario'><ImUser />{usuario}</p>
         <hr className='linha' />
         <div className='container-botoes-menu'>
-            <button><MdDashboard />Dashboard</button>
             <button><BiSolidCategoryAlt />Categorias</button>
-            <button><BsCart /> Produtos</button>
-            <button><FaUsers />Profissionais</button>
+            <button><FaUsers />Clientes</button>
+            <button><MdDashboard />Dashboard</button>
             <button><FaUserCircle />Perfil</button>
+            <button><BsCart /> Produtos</button>
         </div>
         <button className='sair'><ImExit />Sair</button>
     </div>
