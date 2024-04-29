@@ -4,6 +4,10 @@ import Menu from '../componentes/Menu'
 function Perfil(){
 
 
+    fetch('http://localhost:5173/usuarios')
+        .then(Response => console.log(Response.json()))
+   
+
     return(
     <>
 
